@@ -10,7 +10,7 @@
         active-text-color="#ffd04b"
         >
         <h3>通用后台管理系统</h3>
-        <el-menu-item v-for="item in noChildren" :key="item.name" :index="item.name">
+        <el-menu-item @click="clickMenu(item)" v-for="item in noChildren" :key="item.name" :index="item.name">
             <i :class="`el-icon-${item.icon}`"></i>
             <span slot="title">{{ item.label }}</span>
         </el-menu-item>
@@ -20,7 +20,7 @@
                 <span slot="title">{{ item.label }}</span>
             </template>
             <el-menu-item-group v-for="subItem in item.children" :key="subItem.path" :index="subItem.path">
-                <el-menu-item :index="subItem.path">{{ subItem.label }}</el-menu-item>
+                <el-menu-item @click="clickMenu(subItem)" :index="subItem.path">{{ subItem.label }}</el-menu-item>
             </el-menu-item-group>
         </el-submenu>
     </el-menu>
@@ -99,6 +99,14 @@ export default {
         },
         handleClose(key, keyPath) {
             console.log(key, keyPath);
+        },
+        // 点击菜单
+        clickMenu(item) {
+            console.log(item);
+            // 当页面路由与跳转路由不一致时才可以跳转
+            if (this.$route.path !== item.path && !(this.$route.path === '/home' && item.path === '/')) {
+                this.$router.push(item.path);
+            }
         }
     },
     computed: {
