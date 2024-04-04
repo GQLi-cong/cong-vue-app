@@ -96,13 +96,13 @@ export default {
                         name: '三星',
                         todayBuy: 300,
                         monthBuy: 1200,
-                        totalBuy: 23200
+                        totalBuy: 23100
                     },
                     {
                         name: '苹果',
                         todayBuy: 450,
                         monthBuy: 1500,
-                        totalBuy: 33200
+                        totalBuy: 33100
                     },
                     {
                         name: '小米',
@@ -114,19 +114,19 @@ export default {
                         name: '华为',
                         todayBuy: 230,
                         monthBuy: 1100,
-                        totalBuy: 16500
+                        totalBuy: 16100
                     },
                     {
                         name: 'oppo',
                         todayBuy: 440,
                         monthBuy: 2100,
-                        totalBuy: 65500
+                        totalBuy: 65100
                     },
                     {
                         name: 'vivo',
                         todayBuy: 480,
                         monthBuy: 1800,
-                        totalBuy: 45500
+                        totalBuy: 45100
                     }
                 ]
             }
