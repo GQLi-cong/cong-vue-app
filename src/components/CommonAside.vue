@@ -101,11 +101,11 @@ export default {
         },
         // 点击菜单
         clickMenu(item) {
-            console.log(item);
             // 当页面路由与跳转路由不一致时才可以跳转
             if (this.$route.path !== item.path && !(this.$route.path === '/home' && item.path === '/')) {
                 this.$router.push(item.path);
             }
+            this.$store.commit('selectMenu', item);
         }
     },
     computed: {

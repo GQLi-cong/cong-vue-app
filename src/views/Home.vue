@@ -134,6 +134,9 @@ export default {
                 data: orderData.date
             };
             echarts1option.yAxis = {};
+            echarts1option.tooltip = {
+                    trigger: "axis",
+            };
             echarts1option.legend = {
                 data: xAxis
             };
@@ -166,7 +169,7 @@ export default {
                 },
                 xAxis: {
                     type: "category", // 类目轴
-                    data: userData.map(item => item.date),
+                    data: userData.map(item => item.data),
                     axisLine: {
                         lineStyle: {
                             color: "#17b3a3",
