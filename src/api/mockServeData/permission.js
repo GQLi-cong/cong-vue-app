@@ -10,25 +10,25 @@ export default {
                 data: {
                     menu: [
                         {
-                            path: '/',
+                            path: '/home',
                             name: 'home',
                             label: '首页',
                             icon: 's-home',
-                            url: 'home/index'
+                            url: 'Home.vue'
                         },
                         {
                             path: '/mall',
                             name: 'mall',
                             label: '商品管理',
                             icon: 'video-play',
-                            url: 'mall/index'
+                            url: 'Mall.vue'
                         },
                         {
                             path: '/user',
                             name: 'user',
                             label: '用户管理',
                             icon: 'user',
-                            url: 'User/index'
+                            url: 'User.vue'
                         },
                         {
                             label: '其他',
@@ -39,14 +39,14 @@ export default {
                                     name: 'page1',
                                     label: '页面1',
                                     icon: 'setting',
-                                    url: 'other/pageOne'
+                                    url: 'PageOne.vue'
                                 },
                                 {
                                     path: '/page2',
                                     name: 'page2',
                                     label: '页面2',
                                     icon: 'setting',
-                                    url: 'other/pageTwo'
+                                    url: 'PageTwo.vue'
                                 },
                             ]
                         }
@@ -62,18 +62,18 @@ export default {
                 data: {
                     menu: [
                         {
-                            path: '/',
+                            path: '/home',
                             name: 'home',
                             label: '首页',
                             icon: 's-home',
-                            url: 'home/index'
+                            url: 'Home.vue'
                         },
                         {
                             path: '/mall',
                             name: 'mall',
                             label: '商品管理',
                             icon: 'video-play',
-                            url: 'mall/index'
+                            url: 'Mall.vue'
                         },
                     ],
                     token: Mock.Random.guid(),

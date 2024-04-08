@@ -24,7 +24,7 @@
 <script>
 
 import { mapState } from 'vuex'
-import Cookie from 'js-cookie'
+import Cookies from 'js-cookie'
 export default {
     data() {
         return {}
@@ -36,7 +36,9 @@ export default {
         handleClick(command) {
             if (command === 'cancel') {
                 // 清除 cookie 的 token 信息
-                Cookie.remove('token');
+                Cookies.remove('token');
+                // 清楚 cookie 中的 menu
+                Cookies.remove('menu');
                 // 跳转到登录页面
                 this.$router.push('/login');
             }

@@ -50,6 +50,11 @@ export default {
                         if (data.code === 20000) {
                             // 将 token 存入 cookie 中，用于不同页面间的通信
                             Cookie.set('token', data.data.token);
+
+                            // 获取菜单的数据，存入store中
+                            this.$store.commit('setMenu', data.data.menu);
+                            this.$store.commit('addMenu', this.$router);
+
                             // 跳转到首页
                             this.$router.push('/home');
                         }
@@ -89,5 +94,4 @@ export default {
         width: 198px;
     }
 }
-
 </style>
